@@ -4,7 +4,8 @@
   "description": "Check for available doctor appointments, because public hc is terrible",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Lau-r-a/appointment-checker/issues"
   },
-  "homepage": "https://github.com/Lau-r-a/appointment-checker#readme"
+  "homepage": "https://github.com/Lau-r-a/appointment-checker#readme",
+  "dependencies": {
+    "matrix-bot-sdk": "^0.6.6"
+  },
+  "type": "module"
 }
