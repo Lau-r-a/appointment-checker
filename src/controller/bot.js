@@ -29,3 +29,10 @@ export function initBot(homeserverUrl, accessToken, storageFile) {
 
   return client;
 }
+
+export function sendMessage(client, roomId, message) {
+  client.sendMessage(roomId, {
+    msgtype: "m.notice",
+    body: message,
+  });
+}
