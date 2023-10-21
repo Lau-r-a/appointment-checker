@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Lau-r-a/appointment-checker#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "matrix-bot-sdk": "^0.6.6"
   },
   "type": "module"
