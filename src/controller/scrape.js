@@ -27,8 +27,8 @@ async function availableWithOption(url, option) {
           " and message: " +
           response.data.message
       );
-      return false;
     }
+    return false;
   } else {
     console.log("Appointment available with option " + JSON.stringify(option));
     return true;
