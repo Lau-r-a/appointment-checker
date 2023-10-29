@@ -4,7 +4,7 @@ FROM node:lts-alpine3.18
 COPY . /app/
 WORKDIR /app/
 
-RUN npm ci
+RUN npm install
 
 # Entrypoint
 CMD npm run start
