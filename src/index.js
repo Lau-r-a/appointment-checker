@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { initBot, sendMessage } from "./controller/bot.js";
+import { login, initBot, sendMessage } from "./controller/bot.js";
 import { isAvailable } from "./controller/scrape.js";
 
 function sendMessageOnAvailability() {
@@ -15,9 +15,15 @@ function sendMessageOnAvailability() {
   }
 }
 
+const accessToken = await login(
+  process.env.MATRIX_HOMESERVER,
+  process.env.MATRIX_USER,
+  process.env.MATRIX_PW
+);
+
 const client = initBot(
   process.env.MATRIX_HOMESERVER,
-  process.env.MATRIX_TOKEN,
+  accessToken,
   process.env.BOT_STORAGE
 );
 
