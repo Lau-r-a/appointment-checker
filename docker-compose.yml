@@ -1,0 +1,15 @@
+version: "3.1"
+
+services:
+  appointment-checker:
+    environment:
+      MATRIX_ROOM: ${MATRIX_ROOM}
+      MATRIX_HOMESERVER: ${MATRIX_HOMESERVER}
+      SCRAPE_SITE: ${SCRAPE_SITE}
+      BOT_STORAGE: ${BOT_STORAGE}
+      START_DATE: ${START_DATE}
+      LOOKAHEAD: ${LOOKAHEAD}
+      MATRIX_USER: ${MATRIX_USER}
+      MATRIX_PW: ${MATRIX_PW}
+    restart: always
+    build: .
