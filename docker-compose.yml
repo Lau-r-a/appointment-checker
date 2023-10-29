@@ -12,4 +12,4 @@ services:
       MATRIX_USER: ${MATRIX_USER}
       MATRIX_PW: ${MATRIX_PW}
     restart: always
-    build: .
+    image: docker pull ghcr.io/lau-r-a/appointment-checker:master
