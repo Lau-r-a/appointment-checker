@@ -1,7 +1,4 @@
-FROM node:lts-alpine3.18
-
-# apk add gcompat
-RUN apk add gcompat && apk cache clean
+FROM node:18.18.2-bullseye
 
 COPY . /app/
 WORKDIR /app/
