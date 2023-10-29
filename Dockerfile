@@ -1,7 +1,7 @@
 FROM node:lts-alpine3.18
 
 # apk add gcompat
-RUN apk add libc6-compat && apk cache clean
+RUN apk add gcompat && apk cache clean
 
 COPY . /app/
 WORKDIR /app/
