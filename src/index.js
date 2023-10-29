@@ -28,4 +28,4 @@ const client = initBot(
 );
 
 setInterval(sendMessageOnAvailability, 1000 * 60 * 5);
-sendMessageOnAvailability();
+//sendMessageOnAvailability();

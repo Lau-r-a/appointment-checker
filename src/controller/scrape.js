@@ -12,7 +12,12 @@ function setDate(start_date, multiplicator) {
 }
 
 async function availableWithOption(url, option) {
-  let response = await axios.get(url, option);
+  let response;
+  try {
+    response = await axios.get(url, option);
+  } catch (e) {
+    console.log("Couldn't call the url: " + e);
+  }
 
   if (response.data.total != undefined && response.data.total == 0) {
     if (
